@@ -1,0 +1,106 @@
+:root{
+  --bg:#151A1F;
+  --card:#1C222A;
+  --muted:#9ca3af;
+  --accent: #8B1E3F;
+  --text:#e5e7eb;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Segoe UI,Arial;margin:0;color:var(--text);background:var(--bg);line-height:1.5}
+.container{max-width:900px;margin:24px auto;padding:0 16px}
+.site-header{background: #8B1E3F;color:#fff;padding:40px 0}
+.site-header .container{display:flex;flex-direction:column;gap:8px}
+.site-title{margin:0;font-size:28px}
+.site-sub{margin:0;opacity:.95}
+.nav a{color:rgba(255,255,255,.95);margin-right:12px;text-decoration:none}
+
+/* Make email and resume links explicitly white */
+#contact a[href^="mailto:"],
+#contact a[href$="resume.html"],
+.nav a[href$="Tanisha_Surana_Resume.pdf"]{
+  color: #ffffff;
+}
+.card{
+  background:var(--card);
+  color:var(--text);padding:18px;
+  border-radius:8px;margin:28px 0;
+  box-shadow:0 1px 2px rgba(0,0,0,.5);
+  border:1px solid rgba(255,255,255,0.04)
+}
+
+#contact a{
+  color: var(--text);
+  text-decoration: underline;
+}
+
+#contact a:hover{
+  color: var(--accent);
+}
+
+.projects-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:12px
+}
+
+/* Extra spacing between Projects and Contact sections */
+#projects{margin-bottom:56px}
+#contact{margin-top:56px}
+.project h3{margin:0 0 6px}
+.muted{color:var(--muted);margin:6px 0}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:8px 12px;border-radius:6px;text-decoration:none}
+.btn:hover{background: #8B1E3F}
+.site-footer{padding:24px 0;text-align:center;color:var(--muted)}
+.resume{padding:24px}
+.resume .card{margin:28px 0}
+.resume-header h1{margin:0}
+.job{margin-bottom:12px}
+/* Responsive utilities */
+img{max-width:100%;height:auto;display:block}
+
+/* Fluid type for headings */
+.site-title{font-size:clamp(1.4rem,4vw,2.125rem)}
+.site-sub{font-size:clamp(.9rem,2.2vw,1rem)}
+
+/* Make nav touch-friendly and wrap on small screens */
+.nav{display:flex;gap:12px;flex-wrap:wrap}
+.nav a{padding:8px 6px;border-radius:6px}
+
+/* Smaller spacing on very small screens */
+@media(max-width:480px){
+  .site-header{padding:20px 0}
+  .container{padding:0 12px}
+  .card{padding:14px}
+  .projects-grid{gap:10px}
+}
+
+@media(max-width:600px){
+  .projects-grid{grid-template-columns:1fr}
+}
+@media(min-width:700px){.site-header .container{flex-direction:row;align-items:center;justify-content:space-between}.site-title{font-size:34px}}
+
+/* Profile photo (used in header and resume) */
+.profile-photo{
+  width:122px;
+  height:122px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid rgba(255,255,255,0.12);
+  background:linear-gradient(135deg,#ccc,#999);
+}
+
+.title-wrap{display:flex;flex-direction:column;justify-content:center;gap:4px}
+
+/* Header layout: place photo left of title on wider screens */
+.site-header .container{align-items:center}
+.site-header .profile-photo{margin-right:12px}
+
+/* Resume header layout */
+.resume-header{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.resume-header .profile-photo{width:96px;height:96px;margin:0;border-width:2px}
+
+@media(max-width:600px){
+  .profile-photo{width:64px;height:64px}
+  .resume-header .profile-photo{width:72px;height:72px}
+  .site-header .container{flex-direction:column;align-items:flex-start}
+  .site-header .profile-photo{margin-right:0;margin-bottom:8px}
+}
