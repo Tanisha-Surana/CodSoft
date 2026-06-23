@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Login - Aurora</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+  <header class="nav-wrap">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">AURORA</a>
+      <div class="nav-right"><a href="index.html" class="btn btn-ghost">Back</a></div>
+    </div>
+  </header>
+
+  <main class="auth-main">
+    <div class="auth-card">
+      <h2>Welcome back</h2>
+      <p class="muted">Sign in to continue to Aurora</p>
+
+      <form class="login-form" onsubmit="return false;">
+        <label>Email
+          <input type="email" placeholder="you@company.com" required>
+        </label>
+        <label>Password
+          <input type="password" placeholder="••••••••" required>
+        </label>
+
+        <button class="btn btn-primary" type="submit">Log in</button>
+        <p class="muted">Don't have an account? <a href="#">Sign up</a></p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="auth-footer">
+    <div class="container">© 2024 Aurora</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
